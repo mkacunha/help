@@ -24,6 +24,7 @@
       name: 'Help',
       repo: '',
       loadSidebar: true,
+      subMaxLevel: 6,
 
       search: {
         maxAge: 86400000,
@@ -31,11 +32,11 @@
         placeholder: 'Pesquisar',
         noData: 'Nenhum resultado!',
         depth: 1
-      },
-
-      alias: {
-        '/git': 'https://github.com/mkacunha/git-commands/master/README'
       }
+    }
+
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
