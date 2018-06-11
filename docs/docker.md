@@ -5,9 +5,9 @@
 `docker version`   exibe a versão do docker que está instalada.  
 `docker inspect ID_CONTAINER`    retorna diversas informações sobre o container.  
 `docker ps`   exibe todos os containers em execução no momento.  
-`docker ps -a`   exibe todos os containers, independente de estarem em execução ou não.  
-`docker images`   exibe todos os containers, independente de estarem em execução ou não.  
+`docker ps -a`   exibe todos os containers, independente de estarem em execução ou não.   
 `docker ps -q`   exibe todos os ID's dos containers em execução.  
+`docker images`   exibe todas as imagens. 
 `docker images -q`   exibe todos os ID's das imagens.  
 
 
