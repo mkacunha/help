@@ -6,10 +6,16 @@
 `docker inspect ID_CONTAINER`    retorna diversas informações sobre o container.  
 `docker ps`   exibe todos os containers em execução no momento.  
 `docker ps -a`   exibe todos os containers, independente de estarem em execução ou não.  
+`docker images`   exibe todos os containers, independente de estarem em execução ou não.  
+`docker ps -q`   exibe todos os ID's dos containers em execução.  
+`docker images -q`   exibe todos os ID's das imagens.  
+
+
 
 ### Comandos relacionados à execução
 
 `docker run NOME_DA_IMAGEM`   cria um container com a respectiva imagem passada como parâmetro.  
+`docker run --rm NOME_DA_IMAGEM`   criar um container que será removido automaticamente quando sair.  
 `docker run -it NOME_DA_IMAGEM`   conecta o terminal que estamos utilizando com o do container.  
 `docker run -d -P --name NOME dockersamples/static-site`   ao executar, dá um nome ao container.  
 `docker run -d -p 12345:80 dockersamples/static-site`   define uma porta específica para ser atribuída à porta 80 do container, neste caso 12345.  
@@ -23,14 +29,15 @@
 `docker start ID_CONTAINER`   inicia o container com id em questão.  
 `docker start -a -i ID_CONTAINER`   inicia o container com id em questão e integra os terminais, além de permitir interação entre ambos.  
 `docker stop ID_CONTAINER`   interrompe o container com id em questão.  
-
+`docker stop $(docker ps -a -q)`   interrompe a execução de todos os containers. 
 
 ### Comandos relacionados à remoção
 
 `docker rm ID_CONTAINER`   remove o container com id em questão.  
 `docker container prune`   remove todos os containers que estão parados.  
 `docker rmi NOME_DA_IMAGEM`   remove a imagem passada como parâmetro.  
-
+`docker rm $(docker ps -a -q)`   remove todos os containers. 
+`docker rmi $(docker images -q)`   remove todas as imagens. 
 ### Comandos relacionados à construção de Dockerfile
 
 `docker build -f Dockerfile`   cria uma imagem a partir de um Dockerfile.  
