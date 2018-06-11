@@ -7,7 +7,7 @@
 `docker ps`   exibe todos os containers em execução no momento.  
 `docker ps -a`   exibe todos os containers, independente de estarem em execução ou não.   
 `docker ps -q`   exibe todos os ID's dos containers em execução.  
-`docker images`   exibe todas as imagens. 
+`docker images`   exibe todas as imagens.   
 `docker images -q`   exibe todos os ID's das imagens.  
 
 
