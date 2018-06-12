@@ -78,13 +78,13 @@ Cria um container do Postgres com o nome `postgres-db`, usuário `postgres-user`
 
 #### MySQL
 
-`docker run --name mysql-db -p 3306:3606 \
+`docker run --name mysql-db -p 3306:3306 \
 -e MYSQL_PASSWORD=1234 \
 -e MYSQL_USER=mysql-user \
 -e MYSQL_DATABASE=mysql_db \
 -d mysql/mysql-server:latest` 
 
-Cria um container do MySQL com o nome `mysql-db`, usuário `mysql-user`, senha `1234`, banco de dados `mysql_db` e expõe a porta `3606` para conexão externa.  
+Cria um container do MySQL com o nome `mysql-db`, usuário `mysql-user`, senha `1234`, banco de dados `mysql_db` e expõe a porta `3306` para conexão externa.  
 
 #### SQL Server 2017
 
