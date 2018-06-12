@@ -64,3 +64,31 @@
 `docker-compose down`   Para todos os serviços e removem os containers  
 `docker-compose restart` Reinicia os containers, é como se tivesse executado os comandos `docker-compose down` e `docker-compose up`  
 
+### Imagens
+
+#### Postgres
+
+`docker run --name postgres-db -p 5432:5432 \
+-e POSTGRES_PASSWORD=1234 \
+-e POSTGRES_USER=postgres-user \
+-e POSTGRES_DB=postgres_db \
+-d postgres:latest`  
+
+Cria um container do Postgres com o nome `postgres-db`, usuário `postgres-user`, senha `1234`, banco de dados `postgres_db` e expõe a porta `5432` para conexão externa.  
+
+#### MySQL
+
+`docker run --name mysql-db -p 3306:3606 \
+-e MYSQL_PASSWORD=1234 \
+-e MYSQL_USER=mysql-user \
+-e MYSQL_DATABASE=mysql_db \
+-d mysql/mysql-server:latest` 
+
+Cria um container do MySQL com o nome `mysql-db`, usuário `mysql-user`, senha `1234`, banco de dados `mysql_db` e expõe a porta `3606` para conexão externa.  
+
+#### SQL Server 2017
+
+`docker run --name mssql-server-db -p 1433:1433 -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=!Q@W#E$R%t' -d microsoft/mssql-server-linux:2017-latest`  
+
+Cria um container do SQL Server 2017 com o nome `mssql-server-db`, senha `!Q@W#E$R%t` e expõe a porta `1433` para conexão externa.
+A variável de ambiente `ACCEPT_EULA=Y` significa que aceita o contrato de licença do SQL Server, e a variável `SA_PASSWORD` define uma senha para acesso ao banco de dados. Não existe variável de ambiente para definir o nome do banco de dados e usuário na criação do container. Ao executar `run` na imagem do SQL Server, é criado automaticamente o banco de dados `master` e o usuário `sa`.  
