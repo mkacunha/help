@@ -15,7 +15,4 @@
 
 ### Comandos relacionados à compilação
 `mvn compile` compila o código-fonte do projeto atual.  
-`mvn package` empacota o código compilado em algum formato de distribuição, ex: JAR.  
-
-### Comandos relacionados à remoção 
-`npm uninstall <nome do pacote>` desinstala um pacote em específico.  
+`mvn package` empacota o código compilado em algum formato de distribuição, ex: JAR.
