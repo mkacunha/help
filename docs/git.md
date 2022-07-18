@@ -6,6 +6,10 @@
 
 Após rodar o comando será solicitado uma senha, caso queira deixar sem senha basta apertar enter sem informar nada. Após isso será gerado uma chave pública e uma chave privada. No terminal aparece em qual diretório foi criado. Agora é só editar o arquivo que contém a chave pública e configurar no repositório remoto em chaves públicas.
 
+#### Usar chave SSH por repositório
+
+`git config --add --local core.sshCommand 'ssh -i <<<PATH_TO_SSH_KEY>>>'`
+
 ## Funcionalidades e comandos
 
 #### Configurando nome do usuário do commit apenas do repositório atual
